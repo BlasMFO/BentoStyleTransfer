@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;   /* 62.5 % of 16 = 10 */
+    font-family: sans-serif;
+    color: #1d1b1b;
+}
+
+.clear {
+    clear: both;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+    padding: 5rem 0rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    margin: 0rem 5rem 5rem 5rem;
+    font-weight: lighter;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+a {
+    text-decoration: none;
+    font-style: italic;
+    color:  #00add0;
+}
+
+nav {
+    background: #E80097;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+nav h1 {
+    float: left;
+    flex: 1;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+}
+
+nav li {
+    float: left;
+    margin: 0rem 1.5rem;
+}
+
+p a:hover:after{
+    content: " ¶ ";
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 1.8rem;
+}
+
+nav li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.label-div {
+    display: flex;
+    justify-content: start;
+    font-size: 1.8rem;
+    margin: 1rem 1.5rem;
+}
+
+.custom-div {
+    display: flex;
+    margin: 2rem 0rem 5rem 4rem;
+}
+
+button {
+    border-radius: 1rem;
+    color: white;
+    background:  #E80097;
+    padding: 1rem 2.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 2.5rem;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+    background: #fa44b1;
+}
+
+.form-section {
+    margin: 2rem 4rem;
+}
+
+input[type="file"] {
+    background: none;
+}
+
+input[type="file"]::file-selector-button  {
+    color: #E80097;
+    border-radius: 1rem;
+    border: solid #E80097 1px;
+    background: none;
+}
+
+.custom-img {
+    height: 20rem;
+    width: auto;
+    max-width: 30rem;
+    box-shadow: 2px 2px 5px rgb(110, 109, 109);
+}
+
+.round-img {
+    border-radius: 50%;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    box-shadow: 2px 2px 5px rgb(110, 109, 109);
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    align-self: flex-end;
+    position: relative;
+    bottom: -5rem;
+    left: -5rem;
+}
+
+.down-btn {
+    border-radius: 50%;
+    background:  #E80097;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    bottom: -3rem;
+    left: -3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.down-btn:hover {
+    color: rgb(100, 97, 85);
+    background: #FF0099;
+    
+}
+
+.down-btn > img {
+    position: absolute;
+}
+
+.down-btn:hover > .icon-class {
+    opacity: 0;
+}

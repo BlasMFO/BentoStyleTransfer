@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index,follow" />
+		<meta name="description" content="This is a training page" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/style.css') }}"
+		/>
+		<link
+			rel="icon"
+			href="{{ url_for('static', filename='assets/picIcon.png') }}"
+		/>
+		<title>Style Transfer | About</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<h1 id="logo">
+					Transfer Painting Styles
+					<img
+						src="{{ url_for('static', filename='assets/pencil.png') }}"
+						alt="Logo-Icon"
+						width="25"
+					/>
+				</h1>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="{{ url_for('about') }}">About</a></li>
+				</ul>
+				<div class="clear"></div>
+			</nav>
+		</header>
+		<section class="form-section">
+			<h3>About</h3>
+			<p>
+				Here you can use Deep Learning (DNN) to compose one image in the style
+				of another image. You can have your portrait paint like Picasso or Van
+				Gogh... How cool is that? Go ahead and try this app. Just select your
+				own photo and a photo to mimic the style, such as a famous painting, and
+				Wuala!
+			</p>
+			<p>
+				For more info please visit:
+				<a
+					href="https://www.tensorflow.org/tutorials/generative/style_transfer"
+					target="blank"
+					>tensorflow.org/</a
+				>
+			</p>
+		</section>
+	</body>
+</html>

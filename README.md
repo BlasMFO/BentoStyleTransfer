@@ -9,7 +9,7 @@
 
 Some screenshots of the web app:
 
-* Open your browser in localhost on port 5000 and you will see this page:
+* Open your browser in localhost on port 80 and you will see this page:
 ![screen_shot01](./screenshots/ScreenShot01.png)
 
 * Select a source and a style image to process. The program will mimic the style image into the source image:

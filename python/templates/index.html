@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index,follow" />
+		<meta name="description" content="This is a training page" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/style.css') }}"
+		/>
+		<link
+			rel="icon"
+			href="{{ url_for('static', filename='assets/picIcon.png') }}"
+		/>
+		<title>Style Transfer | Home</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<h1 id="logo">
+					Transfer Painting Styles
+					<img
+						src="{{ url_for('static', filename='assets/pencil.png') }}"
+						alt="Logo-Icon"
+						width="25"
+					/>
+				</h1>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="{{ url_for('about') }}">About</a></li>
+				</ul>
+				<div class="clear"></div>
+			</nav>
+		</header>
+		<section class="form-section">
+			<h3>Select your files:</h3>
+			<form method="post" enctype="multipart/form-data">
+				<div class="label-div">
+					<label for="file1">Source image</label>
+				</div>
+				<div class="custom-div">
+					<input
+						type="file"
+						name="file1"
+						id="file1"
+						accept=".png, .jpg"
+						class="custom-file-input"
+					/>
+				</div>
+				<div class="label-div">
+					<label for="file2">Style image</label>
+				</div>
+				<div class="custom-div">
+					<input
+						type="file"
+						name="file2"
+						id="file2"
+						accept=".png, .jpg"
+						class="custom-file-input"
+					/>
+				</div>
+				<br />
+				<div class="label-div">
+					<button type="submit">Transfer style!</button>
+				</div>
+			</form>
+		</section>
+	</body>
+</html>

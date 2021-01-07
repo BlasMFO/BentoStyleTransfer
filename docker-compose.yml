@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  bento_app:
+    build: ./serving
+    volumes:
+      - ./python/static/temp:/temp
+    ports:
+      - 5000:5000
+
+  flask_app:
+    build: ./python
+    volumes:
+      - ./python:/app   
+    ports:
+      - 80:80
+    depends_on:
+      - bento_app

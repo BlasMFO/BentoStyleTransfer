@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index,follow" />
+		<meta name="description" content="This is a training page" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/style.css') }}"
+		/>
+		<link
+			rel="icon"
+			href="{{ url_for('static', filename='assets/picIcon.png') }}"
+		/>
+		<title>Style Transfer | Stylized</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<h1 id="logo">
+					Transfer Painting Styles
+					<img
+						src="{{ url_for('static', filename='assets/pencil.png') }}"
+						alt="Logo-Icon"
+						width="25"
+					/>
+				</h1>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="{{ url_for('about') }}">About</a></li>
+				</ul>
+				<div class="clear"></div>
+			</nav>
+		</header>
+		<section class="form-section">
+			<h3>Stylized Image</h3>
+			<div class="label-div">
+				<label for="file1">Your images</label>
+			</div>
+			<div class="custom-div">
+				<img
+					class="custom-img"
+					src="{{ result.contentPath }}"
+					alt="Source image"
+				/>
+				<img class="round-img" src="{{ result.stylePath }}" alt="Style image" />
+			</div>
+			<div class="label-div">
+				<label for="file2">Result image</label>
+			</div>
+			<div class="custom-div">
+				<img
+					class="custom-img"
+					src="{{ result.outputPath }}"
+					alt="Result image"
+				/>
+				<a
+					class="down-btn"
+					href="{{ result.outputPath }}"
+					download="stylized_image.jpg"
+				>
+					<img
+						src="{{ url_for('static', filename='assets/download_black.png') }}"
+						alt="Download"
+						width="20"
+						style="z-index: 1"
+					/>
+					<img
+						class="icon-class"
+						src="{{ url_for('static', filename='assets/download.png') }}"
+						alt="Download"
+						width="20"
+						style="z-index: 2"
+					/>
+				</a>
+			</div>
+		</section>
+	</body>
+</html>
